@@ -1,0 +1,31 @@
+@import './variables.scss';
+@import './fonts.scss';
+@import './buttons.scss';
+
+
+body {
+  margin: 0;
+  padding:0;
+  background-color: black;
+  color:white;
+  font-family: $Poppins;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// Style de la barre de scroll
+body::-webkit-scrollbar {
+  width:12px;            
+  }
+  
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 6px;       
+  border: 2px solid red;  
+}
+  
