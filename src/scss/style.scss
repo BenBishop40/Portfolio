@@ -20,12 +20,12 @@ body::-webkit-scrollbar {
   }
   
 body::-webkit-scrollbar-track {
-  background: black;
+  background: white;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: black;
   border-radius: 6px;       
-  border: 2px solid red;  
+  border: 2px solid black;  
 }
   
