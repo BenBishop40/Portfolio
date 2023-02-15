@@ -1,6 +1,14 @@
 @import '../../scss/variables.scss';
 
+
 .about-me{
     position: absolute;
-    top: 40%;
+    top: 30%;
+    left: 40%;
+    p {
+        font-family: $SilkScreen;
+        color: $lightBlue;
+        font-weight: 700;
+        font-size: 2em;
+    }
 }
