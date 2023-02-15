@@ -5,14 +5,21 @@
     width: 100%;
     display: flex;
     padding: 1em 0;
-    background-color: black;
+    background: linear-gradient(black, 90%, $lightBlue);
+    box-shadow: -1em 1em 10em 1em $lightBlue;
     position: fixed;
     z-index: 1;
 
     .logo-container{
         margin: 0 auto;
         .navbar_logo{
+            cursor: pointer;
             width: 80px;
+            transform: rotate(0) scale(1);
+            transition: all 1s ease-in-out;
+        }
+        :hover{
+            transform: rotate(360deg) scale(1.3);
         }
     }
     .navbar_list{
@@ -23,13 +30,15 @@
         align-items: center;
         
         .navbar_item{
+            color: $snowWhite;
             padding: 0 2em 0 0.2em ;
             font-weight: 700;
             cursor: pointer;
             position: relative;
+            transition: .4s ease-in;
 
             &:hover {
-                color: white;
+                color: black;
                 z-index: 999;
             }
 
