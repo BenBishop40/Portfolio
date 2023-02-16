@@ -1,0 +1,20 @@
+.btn {
+    padding: 10px 25px;
+    border: 2px solid;
+    border-radius: 5px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+@mixin button($bg, $border, $font) {
+    background-color: $bg;
+    border-color: $border;
+    color: $font;
+}
+
+.lightblue-btn{
+    @include button(transparent, $lightBlue, $lightBlue)
+}
+.lightblue-btn:hover{
+    @include button($lightBlueTransparent, $lightBlue, $lightBlue)
+}

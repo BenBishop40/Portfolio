@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './_about_me.scss';
-// import pictCartoon from '../../img/pic_id_cartoon.jpg';
+
+import pictCartoon from '../../img/PicID5.jpg';
 
 class TxtRotate extends Component {
     constructor(props) {
@@ -103,7 +104,7 @@ class TxtToDisplay extends Component {
   render() {
     return (
       <div className='txt-display'>
-        <h2 ref={this.h2Ref}>Je m'appelle Benjamin Leveque</h2>
+        <h2 ref={this.h2Ref}>Je suis Benjamin LEVEQUE</h2>
         <h3 ref={this.h3Ref}>Développeur web et intégrateur</h3>
       </div>
     )
@@ -114,17 +115,21 @@ class AboutMe extends Component {
   render() {
     return (
       <div className='about-me'>
-        <p>
-          Hello,{' '}
-          <TxtRotate
-            toRotate='["World !", "Visiteur !", "Recruteur ?!"]'
-            period="5000"
-          />
-          <span className='wrap-border'>
-            |
-          </span>
-        </p>
-        <TxtToDisplay />
+        <img className='img-cartoon' alt='portrait_cartoon_benjamin_leveque' src={pictCartoon}/>
+        <div className="presentation">
+          <p>
+            Hello{' '}
+            <TxtRotate
+              toRotate='["World !", "Visiteur !", "Recruteur ?!"]'
+              period="5000"
+            />
+            <span className='wrap-border'>
+              |
+            </span>
+          </p>
+          <TxtToDisplay />
+          <button className='btn btn-about-me lightblue-btn'>En savoir plus</button>
+        </div>
       </div>
     );
   }

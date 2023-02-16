@@ -1,33 +1,90 @@
 @import '../../scss/variables.scss';
+@import '../../scss/buttons.scss';
 
 
 .about-me{
     position: absolute;
     top: 30%;
-    left: 40%;
-    p {
-        font-family: $SilkScreen;
-        color: $lightBlue;
-        font-weight: 700;
-        font-size: 2em;
+    left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+
+    .img-cartoon{
+        transform: scale(0);
+        max-height:30vh;
+        margin: 1em 5em;
+        border-radius: 10px;
+        box-shadow: .1em .1em 1em $lightBlue;
+        animation-name: zoompic;
+        animation-delay: 4s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
     }
-    .wrap-border {
-        animation-duration: .5s;
-        animation-name: clignoter;
-        animation-iteration-count: infinite;
-        transition: ease-in-out;
+    @keyframes zoompic {
+        100%{transform: scale(1);}
     }
-    .hidden{
-        display: none;
-    }
-    @keyframes clignoter {
-        0% {opacity:1}
-        100% {opacity: 0;}
-    }
-    .txt-display{
-        font-family: $Raleway;
-        color: $snowWhite;
-        font-size: 2em;
-        text-shadow: .1em .1em .3em $lightBlue;
+    .presentation {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        p {
+            position: absolute;
+            top: -25%;
+            left: 0%;
+            text-align: left;
+            font-family: $SilkScreen;
+            color: $lightBlue;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+        .wrap-border {
+            animation-duration: .6s;
+            animation-name: clignoter;
+            animation-iteration-count: infinite;
+            transition: none;
+        }
+        .hidden{
+            display: none;
+        }
+        @keyframes clignoter {
+            0% {opacity:1}
+            100% {opacity: 0}
+        }
+        .txt-display{
+            font-family: $Raleway;
+            color: $snowWhite;
+            font-size: 1.8rem;
+            text-shadow: .1em .1em .3em $lightBlue;
+        }
+        .btn-about-me{
+            transform: scale(0);
+            animation-delay: 5s;
+            animation-duration: 2s;
+            animation-name: zoomBtn;
+            animation-fill-mode: forwards;
+            min-width: 5vw;
+            margin: 2vh auto;
+        }
+        @keyframes zoomBtn {
+            100% {transform: scale(1);}
+        }
+    }   
+}
+
+@media screen and (max-width: $lg-screen) {
+    .about-me{
+        left: 10%;
     }
 }
+@media screen and (max-width: $md-screen) {
+    .about-me{
+        left: 0%;
+        flex-wrap: wrap;
+    }
+}
+
+

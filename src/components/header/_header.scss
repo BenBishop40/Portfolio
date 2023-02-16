@@ -7,14 +7,14 @@
     padding: 1em 0;
     background: linear-gradient(black, 85%, $lightBlueShadow);
     box-shadow: -1em 1em 10em 1em $lightBlueShadow;
-    position: fixed;
+    position: sticky;
     z-index: 1;
 
     .logo-container{
         margin: 0 auto;
         .navbar_logo{
             cursor: pointer;
-            width: 80px;
+            width: 60px;
             transform: rotate(0) scale(1);
             transition: all 1s ease-in-out;
         }
