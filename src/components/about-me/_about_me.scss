@@ -11,4 +11,23 @@
         font-weight: 700;
         font-size: 2em;
     }
+    .wrap-border {
+        animation-duration: .5s;
+        animation-name: clignoter;
+        animation-iteration-count: infinite;
+        transition: ease-in-out;
+    }
+    .hidden{
+        display: none;
+    }
+    @keyframes clignoter {
+        0% {opacity:1}
+        100% {opacity: 0;}
+    }
+    .txt-display{
+        font-family: $Raleway;
+        color: $snowWhite;
+        font-size: 2em;
+        text-shadow: .1em .1em .3em $lightBlue;
+    }
 }

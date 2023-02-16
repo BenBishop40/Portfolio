@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './_about_me.scss';
 // import pictCartoon from '../../img/pic_id_cartoon.jpg';
 
-
 class TxtRotate extends Component {
     constructor(props) {
       super(props);
@@ -48,33 +47,87 @@ class TxtRotate extends Component {
         }));
         delta = 1000;
       }
-  
       setTimeout(() => {
         that.tick();
       }, delta);
     }
   
-    render() {
-      return (
-        <span className="txt-rotate">
-          <span className="wrap">{this.state.txt}</span>
-        </span>
-      );
-    }
+  render() {
+    return (
+      <span className="txt-rotate">
+        <span className="wrap">{this.state.txt}</span>
+      </span>
+    );
   }
+}
+
+class TxtToDisplay extends Component {
+  constructor(props) {
+    super(props);
+
+    this.h2Ref = React.createRef();
+    this.h3Ref = React.createRef();
+  }
+  typeEffect(element, speed) {
+    const text = element.innerHTML;
+    element.innerHTML = '';
+
+    let i = 0;
+    let timer = setInterval(() => {
+      if (i < text.length) {
+        element.append(text.charAt(i));
+        i++;
+      } else {
+        clearInterval(timer);
+        element.classList.remove("hidden");
+      }
+    }, speed);
+  }
+
+  componentDidMount() {
+    const speed = 75;
+    const h2 = this.h2Ref.current;
+    const h3 = this.h3Ref.current;
+
+    const delay =  h3.innerHTML.length*speed;
+    h2.classList.add("hidden");
+    h3.classList.add("hidden");
+
+    this.typeEffect(h2, speed);
+    
+    setTimeout(() => {
+      this.typeEffect(h3, speed);
+    }, delay);
+  }
+
+  render() {
+    return (
+      <div className='txt-display'>
+        <h2 ref={this.h2Ref}>Je m'appelle Benjamin Leveque</h2>
+        <h3 ref={this.h3Ref}>Développeur web et intégrateur</h3>
+      </div>
+    )
+  }
+}
   
-  export default class AboutMe extends Component {
-    render() {
-      return (
-        <div className='about-me'>
-          <p>
-            Hello,{' '}
-            <TxtRotate
-              toRotate='["World !", "Visiteur !", "Recruteur ?!"]'
-              period="5000"
-            />
-          </p>
-        </div>
-      );
-    }
+class AboutMe extends Component {
+  render() {
+    return (
+      <div className='about-me'>
+        <p>
+          Hello,{' '}
+          <TxtRotate
+            toRotate='["World !", "Visiteur !", "Recruteur ?!"]'
+            period="5000"
+          />
+          <span className='wrap-border'>
+            |
+          </span>
+        </p>
+        <TxtToDisplay />
+      </div>
+    );
   }
+}
+
+export default AboutMe;
