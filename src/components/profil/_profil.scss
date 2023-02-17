@@ -3,25 +3,26 @@
 
 .profil-container{
     display:flex;
-    max-width: 1400px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 20vh 5vw;
     align-items: center;
+
     .profil-presentation{
-        width: 75%;
-        padding: 1vh 3vw;
+
         .profil-title{
             font-size: 2rem;
             color: $lightBlue;
-            margin-bottom: 10vh;
+            font-family: $SilkScreen;
         }
         .profil-presentation-txt{
+            width: 75%;
+            padding-left: 5vw;
             a, span {
                 color: $lightBlue;
                 transition: .2s ease-in-out;
                 text-decoration: none;
             }
-
             a:hover{
                 color: $snowWhite;
                 font-weight:700;
@@ -29,26 +30,32 @@
         }
     }
     .profil-pict{
-        width: 25%;
+        min-width: 20%;
         border: 2px solid $lightBlue;
         border-radius: 20px;
+
         .profil-pict-main{
             width: 100%;
             border-radius: 20px;
             display:flex;
             margin: 0 auto;
             transform: translate(-10px, -10px);
-            box-shadow: 1em 1em 1em .1em $lightBlueTransparent;
+            box-shadow: 1em 1em 1em 1em $lightBlueTransparent;
             transition: .8s ease-in-out;
         }
-    :hover{
-        transform: scale(1.3);
-    }
+        :hover{
+            transform: translate(0px, 0px);
+            box-shadow: none;
+        }
     }
 }
 
-@media screen and (max-width: $sm-screen) {
+@media screen and (max-width: $md-screen) {
     .profil-container{
         flex-direction: column;
+        .profil-pict{
+            margin-top: 6vh;
+            width: 25%;
+        }
     }
 }

@@ -128,7 +128,7 @@ class AboutMe extends Component {
             </span>
           </p>
           <TxtToDisplay />
-          <button className='btn btn-about-me lightblue-btn'>En savoir plus</button>
+          <button className='btn btn-about-me lightblue-btn'><a href='#profil'>En savoir plus</a></button>
         </div>
       </div>
     );

@@ -4,13 +4,19 @@
 
 *{
   scroll-behavior: smooth;
-}
-body {
-  margin: 0;
-  padding:0;
-  background-color: black;
-  color:white;
-  font-family: $Poppins;
+  body {
+    margin: 0;
+    padding:0;
+    background-color: black;
+    color: $snowWhite;
+    font-family: $Poppins;
+    a {
+      text-decoration: none;
+      font-family: $SilkScreen;
+      color: $lightBlue;
+      
+    }
+  }
 }
 
 
