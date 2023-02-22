@@ -1,6 +1,6 @@
 import './_profil.scss';
-import pictCartoon from '../../img/PicID5.jpg'
-import pictProfile from '../../img/Capture.JPG'
+// import pictCartoon from '../../img/PicID5.jpg'
+import pictProfile from '../../img/Capture.png'
 import React, { useRef } from 'react';
 import { useEffect } from 'react';
 import { gsap } from "gsap";
