@@ -1,0 +1,40 @@
+@import '../../scss/variables.scss';
+
+#skills{
+    padding: 1rem 2rem;
+    
+    .skills-container{
+        display: flex;
+        flex-direction: column;
+        .skills-title{
+            font-family: $SilkScreen;
+            color: $lightBlue;
+            padding: 0 2rem;
+
+            
+            
+        }
+    
+        .skill-box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .box{
+                padding: 1rem 1rem;
+                .skill-item{
+                    .skill-bar{
+                        width: 20vw;
+                        height: .5em;
+                        background-color: $darkBlue;
+                        .skill-bar-fullfilled {
+                        height: .5em;
+                        background-color: $lightBlue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
