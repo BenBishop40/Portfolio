@@ -6,13 +6,11 @@
     .skills-container{
         display: flex;
         flex-direction: column;
+        padding: 20vh 5vw;
+
         .skills-title{
             font-family: $SilkScreen;
             color: $lightBlue;
-            padding: 0 2rem;
-
-            
-            
         }
     
         .skill-box{

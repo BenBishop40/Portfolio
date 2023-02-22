@@ -2,7 +2,7 @@
 @import '../../scss/buttons.scss';
 
 
-.about-me{
+#about-me{
     position: absolute;
     top: 40%;
     left: 25%;
@@ -58,8 +58,12 @@
             color: $snowWhite;
             font-size: 1.8rem;
             text-shadow: .1em .1em .3em $lightBlue;
+            h2{
+                font-size: 1.5em;
+            }
         }
         .btn-about-me{
+            color: $lightBlue;
             transform: scale(0);
             animation-delay: 5s;
             animation-duration: 2s;
@@ -67,6 +71,9 @@
             animation-fill-mode: forwards;
             min-width: 5vw;
             margin: 2vh auto;
+            a{
+                color: $lightBlue;
+            }
         }
         @keyframes zoomBtn {
             100% {transform: scale(1);}

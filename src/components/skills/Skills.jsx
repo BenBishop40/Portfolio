@@ -45,7 +45,7 @@ const Skills = () => {
                 ease: "power4",
                 scrollTrigger: {
                     trigger: elem,
-                    start: "-300 center",
+                    start: "-500 center",
                     end: "bottom center",
                 }
             }

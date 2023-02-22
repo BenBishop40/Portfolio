@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './_about_me.scss';
-
 import pictCartoon from '../../img/PicID5.jpg';
 
 class TxtRotate extends Component {
@@ -114,7 +113,7 @@ class TxtToDisplay extends Component {
 class AboutMe extends Component {
   render() {
     return (
-      <div className='about-me'>
+      <div id='about-me'>
         <img className='img-cartoon' alt='portrait_cartoon_benjamin_leveque' src={pictCartoon}/>
         <div className="presentation">
           <p>
