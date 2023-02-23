@@ -3,12 +3,13 @@
 
 .navbar_header{
     width: 100%;
+    position: fixed;
     display: flex;
     padding: 1em 0;
-    background: linear-gradient(black, 85%, $lightBlueShadow);
-    box-shadow: -1em 1em 10em 1em $lightBlueShadow;
-    position: sticky;
+    transition: all 0.3s ease-in-out;
     z-index: 1;
+    background: linear-gradient(black, 85%, $lightBlueShadow);
+    box-shadow: 1em 1em 10em .1em $lightBlueShadow;
 
     .logo-container{
         margin: 0 auto;
@@ -62,4 +63,9 @@
 
         }
     }
+}
+.navbar_header--transparent{
+    transition: all 0.3s ease-in-out;
+    background: transparent;
+    box-shadow: none;
 }

@@ -18,7 +18,7 @@ class QuotesSlider extends Component {
                     >
                         <div className='quote-item'>
                             <p className='quote'>&laquo;&nbsp;Il y a 10 sortes de personnes dans le monde, ceux qui connaissent le binaire et ceux qui ne le connaissent pas&nbsp;&raquo;</p>
-                            <p className='author'>unkown author</p>
+                            <p className='author'>Auteur inconnu</p>
                         </div>
                         <div className='quote-item'>
                             <p className='quote'>&laquo;&nbsp;Se réunir est un début, rester ensemble est un progrès, travailler ensemble est la réussite.&nbsp;&raquo;</p>
