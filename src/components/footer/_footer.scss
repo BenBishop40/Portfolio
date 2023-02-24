@@ -1,0 +1,24 @@
+@import '../../scss/variables.scss';
+
+.footer{
+    height: 20vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    #footer-links{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        .footer-link{
+            padding: 0 2rem;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            &:hover{
+                color: $lightBlue;
+                transform: translateY(-0.3vh);
+            }
+        }
+    }
+}

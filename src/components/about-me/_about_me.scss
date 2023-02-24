@@ -29,6 +29,8 @@
         100%{transform: scale(1);}
     }
     .presentation {
+        display: flex;
+        flex-direction: column;
 
         p {
             font-family: $SilkScreen;
@@ -68,7 +70,7 @@
             animation-name: zoomBtn;
             animation-fill-mode: forwards;
             min-width: 5vw;
-            margin: 2vh auto;
+            margin: 1vh auto;
             a{
                 color: $lightBlue;
             }

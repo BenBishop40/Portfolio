@@ -1,0 +1,25 @@
+@import '../../scss/variables.scss';
+
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $lightBlueTransparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popup-inner{
+        position: relative;
+        border-radius: 1rem;
+        padding: 32px;
+        width: 100%;
+        max-width: 640px;
+        background-color: $snowWhite;
+        color: black;
+        
+    }
+}

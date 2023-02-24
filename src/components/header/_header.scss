@@ -79,6 +79,10 @@
 }
 
 @media screen and (max-width: $md-screen ) {
+    .navbar_header>.logo-container{
+        margin: 0;
+        padding: 0 3vw;
+    }
     .navbar_links{
         flex-direction: column;
         justify-content: center;
@@ -109,7 +113,7 @@
             margin: 0 auto;
             width: 4vw;
             height: 1px;
-            background-color: $snowWhite;
+            background-color: $lightBlue;
         }
         .navbar_item:last-child:after {
             display: none;
