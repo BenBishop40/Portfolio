@@ -8,27 +8,28 @@ import { useEffect } from 'react';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-const textSlideInTop = (elem) => {
-    gsap.fromTo(
-        elem,
-        {
-            opacity: 0,
-            scale:0,
-    },
-    {
-        opacity: 1,
-        scale: 1,
-        delay: 0.2,
-        duration: 1,
-        ScrollTrigger: {
-            trigger: elem,
-            start: "top center",
-            end: "bottom center"
-        }   
-    }
-    )
-}
 const Status = () => {
+
+    const textSlideInTop = (elem) => {
+        gsap.fromTo(
+            elem,
+            {
+                opacity: 0,
+                scale:0,
+        },
+        {
+            opacity: 1,
+            scale: 1,
+            delay: 0.2,
+            duration: 1,
+            ScrollTrigger: {
+                trigger: elem,
+                start: "top center",
+                end: "bottom center"
+            }   
+        }
+        )
+    }
 
     useEffect(() => {
         textSlideInTop(".status-content");
