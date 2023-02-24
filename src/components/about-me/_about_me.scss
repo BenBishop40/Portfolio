@@ -3,13 +3,16 @@
 
 
 #about-me{
-    position: absolute;
-    top: 30%;
-    left: 25%;
+    height: 100vh;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    background:rgba(0, 0, 0, 0.8) url('../../img/banner_top.jpg');
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
     
     .img-cartoon{
         transform: scale(0);
@@ -26,19 +29,12 @@
         100%{transform: scale(1);}
     }
     .presentation {
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: left;
+
         p {
-            position: absolute;
-            top: -30%;
-            left: 10%;
-            text-align: left;
             font-family: $SilkScreen;
             color: $lightBlue;
             font-weight: 700;
-            font-size: 2rem;
+            font-size: 2vw;
         }
         .wrap-border {
             animation-duration: .6s;
@@ -56,10 +52,12 @@
         .txt-display{
             font-family: $Raleway;
             color: $snowWhite;
-            font-size: 1.8rem;
             text-shadow: .1em .1em .3em $lightBlue;
             h2{
-                font-size: 1.5em;
+                font-size: 3.5vw;
+            }
+            h3{
+                font-size: 2.5vw;
             }
         }
         .btn-about-me{
@@ -81,23 +79,33 @@
     }   
 }
 
-@media screen and (max-width: $lg-screen) {
-    .about-me{
-        left: 10%;
-    }
-}
+// @media screen and (max-width: $sm-screen) {
+    
+// }
+
+
 @media screen and (max-width: $md-screen) {
-    .about-me{
-        left: 0%;
-        flex-wrap: wrap;
+    #about-me{
+        flex-direction: column;
+        text-align: center;
+        .img-cartoon{
+            max-height:20vh;
+        }
         .presentation{
-            text-align: center;
             p{
-                top: -20%;
-                left: 4%;
+                font-size: 3vw;
+            }
+            .txt-display{
+                h2{
+                    font-size: 5vw;
+                }
+                h3{
+                    font-size: 4.5vw;
+                }
             }
         }
     }
 }
+
 
 

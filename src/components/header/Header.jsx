@@ -54,11 +54,11 @@ class Header extends Component {
                     <img className="navbar_logo" src={logo} alt='logo-dark-theme' onClick={handleClick}/>
                 </div>
                 <ul className="navbar_links">
-                    <li className="navbar_item"><a href='#about-me' className='navbar_link'>Accueil</a></li>
-                    <li className="navbar_item"><a href='#profil' className='navbar_link'>Profil</a></li>
-                    <li className="navbar_item"><a href='#skills' className='navbar_link'>Compétences</a></li>
-                    <li className="navbar_item"><a href='#portfolio' className='navbar_link'>Portfolio</a></li>
-                    <li className="navbar_item"><a href='#contact' className='navbar_link'>Contact</a></li>
+                    <li className="navbar_item slideInDown1"><a href='#about-me' className='navbar_link'>Accueil</a></li>
+                    <li className="navbar_item slideInDown2"><a href='#profil' className='navbar_link'>Profil</a></li>
+                    <li className="navbar_item slideInDown3"><a href='#skills' className='navbar_link'>Compétences</a></li>
+                    <li className="navbar_item slideInDown4"><a href='#portfolio' className='navbar_link'>Portfolio</a></li>
+                    <li className="navbar_item slideInDown5"><a href='#contact' className='navbar_link'>Contact</a></li>
                 </ul>
                 <button className="navbar_burger" onClick={handleShowLinks}>
                     <span className="burger_bar"></span>
