@@ -44,27 +44,26 @@
     }
 }
 
-// @media screen and (max-width:668px) {
-//     section#slider {
-//         background-attachment: inherit;
-//         .carousel-root {
-//             width: 100vw;
-//             height: 30vh;
-//             object-fit: cover;
-//             .carousel-slider {
-//                 button {
-//                     padding: 0;
-//                 }
-//                 .quote_item {
-//                     p.quote {
-//                         font-size: 2vh;
-//                     }
-                    
-//                     p.author {
-//                         font-size: 2.8vh;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+@media screen and (max-width: $sm-screen) {
+    #carousel{
+        .carousel-root {
+            .carousel-slider {
+                .control-arrow,
+                .control-dots {
+                    z-index: 0;
+                }
+
+                .quote-item {
+                    width: 70%;
+                        p.quote {
+                            font-size: 0.8rem;
+                            margin-bottom: .5rem;
+                        }
+                        p.author {
+                            font-size: 1rem;
+                        }
+                }
+            }
+        }
+    }
+}

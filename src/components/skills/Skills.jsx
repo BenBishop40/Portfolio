@@ -57,26 +57,26 @@ const Skills = () => {
     })
 
     useEffect(() => {
-        fullfillBars(".html_skill", "80%");
+        fullfillBars(".html_skill", "70%");
         fullfillBars(".css_skill", "70%");
-        fullfillBars(".bootstrap_skill", "60%");
+        fullfillBars(".bootstrap_skill", "50%");
         fullfillBars(".javascript_skill", "70%");
-        fullfillBars(".react_skill", "80%");
-        fullfillBars(".node_skill", "70%");
-        fullfillBars(".sql_skill", "70%");
-        fullfillBars(".adobe_XD_skill", "70%");
-        fullfillBars(".adobe_PS_skill", "60%");
-        fullfillBars(".adobe_IL_skill", "60%");
+        fullfillBars(".react_skill", "70%");
+        fullfillBars(".node_skill", "60%");
+        fullfillBars(".sql_skill", "60%");
+        fullfillBars(".adobe_XD_skill", "60%");
+        fullfillBars(".adobe_PS_skill", "50%");
+        fullfillBars(".adobe_IL_skill", "50%");
         fullfillBars(".erp_skill", "70%");
         fullfillBars(".catia_skill", "70%");
-        fullfillBars(".office_skill", "70%");
+        fullfillBars(".office_skill", "90%");
     }, []);
 
     return (
         <section id='skills'>
             <div className='skills-container'>
                 <div className='skills-title'>
-                    <h2>Compétences :</h2>
+                    <h2>Compétences</h2>
                 </div>
                 <div className="skill-box">
                     <div className="box">
@@ -105,15 +105,15 @@ const Skills = () => {
                                 <div className="skill-bar-fullfilled javascript_skill"></div>
                             </div>
                         </div>
-                    </div>
-                    <div className="box">
-                        <h3>Back-end</h3>
                         <div className="skill-item">
                             <p>React</p>
                             <div className="skill-bar">
                                 <div className="skill-bar-fullfilled react_skill"></div>
                             </div>
                         </div>
+                    </div>
+                    <div className="box">
+                        <h3>Back-end</h3>
                         <div className="skill-item">
                             <p>Node JS</p>
                             <div className="skill-bar">

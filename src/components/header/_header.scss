@@ -15,7 +15,7 @@
         margin: 0 auto;
         .navbar_logo{
             cursor: pointer;
-            width: 60px;
+            width: 4vh;
             transform: scale(1);
             transition: all 1s ease-in-out;
         }
@@ -63,8 +63,8 @@
         }
     }
     .navbar_burger{
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         background: transparent;
         border: none;
         color: inherit;
@@ -123,14 +123,15 @@
         display: block;
         position: fixed;
         top: 1rem;
-        right: 1rem;
+        right: 2rem;
 
         .burger_bar,
         .burger_bar::after,
         .burger_bar::before{
             display: block;
-            width: 40px;
-            height: 3px;
+            width: 30px;
+            height: 2px;
+            border-radius: 2px;
             position: relative;
             background-color: $snowWhite;
             transition: all .5s ease-in-out;
@@ -144,10 +145,10 @@
             left: 0;
         }
         .burger_bar::before{
-            transform: translateY(-12px);
+            transform: translateY(-10px);
         }
         .burger_bar::after{
-            transform: translateY(12px);
+            transform: translateY(10px);
         }
         :hover{
             cursor: pointer;

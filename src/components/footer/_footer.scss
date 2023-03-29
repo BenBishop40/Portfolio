@@ -1,7 +1,7 @@
 @import '../../scss/variables.scss';
 
 .footer{
-    height: 20vh;
+    // height: 20vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -18,6 +18,16 @@
             &:hover{
                 color: $lightBlue;
                 transform: translateY(-0.3vh);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $sm-screen) {
+    .footer{
+        #footer-links{
+            .footer-link{
+                padding: 0;
             }
         }
     }

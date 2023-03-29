@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './_about_me.scss';
-import pictCartoon from '../../img/PicID5.jpg';
+// import pictCartoon from '../../img/PicID5.jpg';
 
 class TxtRotate extends Component {
     constructor(props) {
@@ -15,7 +15,9 @@ class TxtRotate extends Component {
     }
   
     componentDidMount() {
+      setTimeout(() => {
       this.tick();
+      }, 3000)
     }
   
     tick() {
@@ -65,46 +67,68 @@ class TxtToDisplay extends Component {
   constructor(props) {
     super(props);
 
-    this.h2Ref = React.createRef();
-    this.h3Ref = React.createRef();
-  }
-  typeEffect(element, speed) {
-    const text = element.innerHTML;
-    element.innerHTML = '';
+    this.state = {
+      h1Text: '',
+      h2Text: '',
+    };
 
-    let i = 0;
+    this.h1Ref = React.createRef();
+    this.h2Ref = React.createRef();
+  }
+
+  typeEffect(text, speed, setStateKey) {
+    let j = 0;
+  
     let timer = setInterval(() => {
-      if (i < text.length) {
-        element.append(text.charAt(i));
-        i++;
+      if (j < text.length) {
+        const lastChar = text.charAt(j);
+        console.log(lastChar);
+        this.setState(prevState => ({
+          [setStateKey]: prevState[setStateKey].slice(0, j-1) + lastChar,
+        }));
+        j+=1;
       } else {
         clearInterval(timer);
-        element.classList.remove("hidden");
       }
     }, speed);
   }
 
   componentDidMount() {
-    const speed = 75;
+    const speed = 100;
+    const h1 = this.h1Ref.current;
     const h2 = this.h2Ref.current;
-    const h3 = this.h3Ref.current;
 
-    const delay =  h3.innerHTML.length*speed;
-    h2.classList.add("hidden");
-    h3.classList.add("hidden");
+    const h1Text = "Benjamin LEVEQUE";
+    const h2Text = "développeur web - intégrateur";
+    const h1Delay = h1Text.length * speed;
 
-    this.typeEffect(h2, speed);
-    
+    this.setState({
+      h1Text: '',
+      h2Text: '',
+    });
+
     setTimeout(() => {
-      this.typeEffect(h3, speed);
-    }, delay);
+      this.typeEffect(h1Text, speed, 'h1Text');
+    }, 1000);
+    
+    setTimeout(()=> {
+      this.typeEffect(h2Text, speed, 'h2Text');
+    }, 1000 + h1Delay)
+
+
+    h1.classList.remove("hidden");
+
+
+    setTimeout(() => {
+      h2.classList.remove("hidden");
+    }, h1Delay);
   }
 
   render() {
     return (
       <div className='txt-display'>
-        <h2 ref={this.h2Ref}>Je suis Benjamin LEVEQUE</h2>
-        <h3 ref={this.h3Ref}>Développeur web et intégrateur</h3>
+        <h1 ref={this.h1Ref} className='hidden'>{this.state.h1Text}</h1>
+        <h2 ref={this.h2Ref} className='hidden'>{this.state.h2Text}</h2>
       </div>
     )
   }
@@ -114,20 +138,20 @@ class AboutMe extends Component {
   render() {
     return (
       <div id='about-me'>
-        <img className='img-cartoon' alt='portrait_cartoon_benjamin_leveque' src={pictCartoon}/>
+            {/* <img className='img-cartoon' alt='portrait_cartoon_benjamin_leveque' src={pictCartoon}/> */}
         <div className="presentation">
           <p>
             Hello{' '}
             <TxtRotate
               toRotate='["World !", "Visiteur !", "Recruteur ?!"]'
-              period="5000"
+              period="3000"
             />
             <span className='wrap-border'>
               |
             </span>
           </p>
           <TxtToDisplay />
-          <button className='btn btn-about-me lightblue-btn'><a href='#profil'>En savoir plus</a></button>
+          <button className='btn btn-about-me lightblue-btn'><a href='#profil'>Plus d'info</a></button>
         </div>
       </div>
     );

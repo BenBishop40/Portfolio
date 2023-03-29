@@ -6,9 +6,9 @@ import { ScrollToPlugin } from 'gsap/all';
 import { useEffect } from 'react';
 
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const Status = () => {
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
     const textSlideInTop = (elem) => {
         gsap.fromTo(
@@ -22,10 +22,10 @@ const Status = () => {
             scale: 1,
             delay: 0.2,
             duration: 1,
-            ScrollTrigger: {
+            scrollTrigger: {
                 trigger: elem,
-                start: "top center",
-                end: "bottom center"
+                start: "top bottom",
+                // end: "start bottom"
             }   
         }
         )
@@ -39,10 +39,10 @@ const Status = () => {
         <section id='status'>
             <div className='status-content'>
                 <h2>Actuellement :</h2>
-                <p>En recherche d'emploi</p>
+                <p>En recherche d'opportunités</p>
             </div>
         </section>
-    )
+    );
 }
 
 export default Status;

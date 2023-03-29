@@ -1,12 +1,12 @@
 @import '../../scss/variables.scss';
 
 #skills{
-    padding: 1rem 2rem;
+    padding: 3rem 2rem;
     
     .skills-container{
         display: flex;
         flex-direction: column;
-        padding: 20vh 5vw;
+        padding: 10vh 5vw;
 
         .skills-title{
             font-family: $SilkScreen;
