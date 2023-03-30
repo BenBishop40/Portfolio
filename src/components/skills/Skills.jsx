@@ -74,10 +74,10 @@ const Skills = () => {
 
     return (
         <section id='skills'>
+            <div className='skills-title'>
+                <h2>Compétences</h2>
+            </div>
             <div className='skills-container'>
-                <div className='skills-title'>
-                    <h2>Compétences</h2>
-                </div>
                 <div className="skill-box">
                     <div className="box">
                         <h3>Front-end</h3>
@@ -169,6 +169,10 @@ const Skills = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className='cv-download'>
+                    <img src='./capture-cv-benjamin-leveque.JPG' alt="CV Benjamin Leveque" className='cv-download-img'></img>
+                    <button className='btn lightblue-btn'><a href="./cv-benjamin-leveque.pdf" alt="CV en ligne de Benjamin Leveque" target="_blank" download>Télécharger CV</a></button>
                 </div>
             </div>
         </section>

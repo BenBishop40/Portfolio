@@ -3,25 +3,30 @@
 #skills{
     padding: 3rem 2rem;
     
+    .skills-title{
+        font-family: $SilkScreen;
+        color: $lightBlue;
+        text-align: center;
+    }
     .skills-container{
         display: flex;
-        flex-direction: column;
         padding: 10vh 5vw;
-
-        .skills-title{
-            font-family: $SilkScreen;
-            color: $lightBlue;
-        }
     
         .skill-box{
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             justify-content: space-between;
+            min-width: 50%;
             .box{
                 padding: 1rem 1rem;
+                
+                p{
+                    margin-bottom: 0;
+                }
                 .skill-item{
                     .skill-bar{
-                        width: 15vw;
+                        width: 20vw;
                         height: .5em;
                         background-color: $darkBlue;
                         .skill-bar-fullfilled {
@@ -30,6 +35,22 @@
                         }
                     }
                 }
+            }
+        }
+        .cv-download{
+            text-align: center;
+            margin-top: 5vh;
+            display: flex;
+            flex-direction: column;
+            .cv-download-img{
+                border-radius:10px;
+            }
+            button{
+                width: fit-content;
+                margin: 2vh auto;
+            }
+            a{
+                color: $lightBlue
             }
         }
     }
