@@ -3,11 +3,27 @@ import React from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/all';
 import { ScrollToPlugin } from 'gsap/all';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 gsap.registerPlugin( ScrollToPlugin, ScrollTrigger);
 
 const Skills = () => {
+
+    const textRef = useRef(null);
+    useEffect(() => {
+        const timeline = gsap.timeline({repeat: -1});
+
+        const chars = Array.from(textRef.current.querySelectorAll('.display-dots'));
+
+        timeline.from(chars, {opacity: 0, stagger: 0.5})
+        .to(chars, {opacity: 1, stagger: 0.5, delay: 0})
+        .from(chars.reverse(), {opacity: 1, stagger: 0.5})
+        .to(chars.reverse(), {opacity: 0, stagger: 0.5, delay: 0})
+
+        return () => {
+            timeline.kill();
+        };
+    }, []);
 
     const slideInTop = (elem) => {
         gsap.fromTo(
@@ -75,7 +91,7 @@ const Skills = () => {
     return (
         <section id='skills'>
             <div className='skills-title'>
-                <h2>Compétences</h2>
+                <h2>Compétences<span ref={textRef}><span className='display-dots'>.</span><span className='display-dots'>.</span><span className='display-dots'>.</span></span></h2>
             </div>
             <div className='skills-container'>
                 <div className="skill-box">

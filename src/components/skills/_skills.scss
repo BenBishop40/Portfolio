@@ -10,23 +10,28 @@
     }
     .skills-container{
         display: flex;
-        padding: 10vh 5vw;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 5vh 0;
     
         .skill-box{
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             justify-content: space-between;
-            min-width: 50%;
+            min-width: 30%;
             .box{
-                padding: 1rem 1rem;
-                
+                padding: 0 1rem 0 2rem;
+                h3{
+                    text-align: center;
+                    margin: 1.5rem 0 0 0 
+                }
                 p{
                     margin-bottom: 0;
                 }
                 .skill-item{
                     .skill-bar{
-                        width: 20vw;
+                        width: 100%;
                         height: .5em;
                         background-color: $darkBlue;
                         .skill-bar-fullfilled {
@@ -42,18 +47,29 @@
             margin-top: 5vh;
             display: flex;
             flex-direction: column;
+
             .cv-download-img{
                 border-radius:10px;
+                height: auto;
+                max-width: 100%;
             }
             button{
                 width: fit-content;
-                margin: 2vh auto;
+                margin: 4vh auto 0;
             }
             a{
                 color: $lightBlue
             }
         }
     }
+}
 
-
+@media screen and (max-width: $lg-screen) {
+    .skill-box{
+        // display: flex;
+        // flex-direction: column;
+        // flex-wrap: wrap;
+        // justify-content: space-between;
+        width: 60%;
+    } 
 }
