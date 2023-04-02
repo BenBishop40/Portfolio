@@ -3,7 +3,6 @@ import './_popup.scss'
 
 
 function Popup(props) {
-
     
     // disable scroll when popup is open
     useEffect(() => {

@@ -165,7 +165,7 @@ const Skills = () => {
                         </div>
                     </div>
                     <div className="box">
-                        <h3>Divers</h3>
+                        <h3>Industrie & Projets</h3>
                         <div className="skill-item">
                             <p>Sage / SAP</p>
                             <div className="skill-bar">

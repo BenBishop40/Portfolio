@@ -5,6 +5,7 @@ import Profil from "./components/profil/Profil";
 import Status from "./components/status/Status";
 import Skills from "./components/skills/Skills";
 import QuotesSlider from "./components/quotes-slider/QuotesSlider";
+import Portfolio from "./components/portfolio/Portfolio";
 import Footer from "./components/footer/Footer";
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
                 <Status />
                 <Skills />
                 <QuotesSlider />
+                <Portfolio />
                 <Footer />
             </>
         );
