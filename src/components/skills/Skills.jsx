@@ -11,7 +11,7 @@ const Skills = () => {
 
     const textRef = useRef(null);
     useEffect(() => {
-        const timeline = gsap.timeline({repeat: -1});
+        const timeline = gsap.timeline({ repeat: -1 });
 
         const chars = Array.from(textRef.current.querySelectorAll('.display-dots'));
 
