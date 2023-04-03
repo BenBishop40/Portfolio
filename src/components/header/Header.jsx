@@ -15,8 +15,6 @@ class Header extends Component {
 
         this.handleScroll = this.handleScroll.bind(this);
         this.checkScreenSize = this.checkScreenSize.bind(this);
-
-        
     };
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
@@ -32,7 +30,7 @@ class Header extends Component {
         this.setState({ isSmallScreen });
     }
     handleScroll() {
-        const isTransparent = window.scrollY < 100;
+        const isTransparent = window.scrollY < 250;
         this.setState({ isTransparent });
     }
     

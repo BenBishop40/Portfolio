@@ -19,6 +19,7 @@ function Popup(props) {
             <div className="popup-inner" >
                 <button className="close-btn" onClick={props.closePopup}>close</button>
                 { props.children }
+                <button className="close-btn" onClick={props.closePopup}>close</button>
             </div>
         </div>
     ) : "";

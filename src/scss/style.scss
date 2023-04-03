@@ -23,11 +23,10 @@
   }
 }
 
-
 // Style de la barre de scroll
 body::-webkit-scrollbar {
   width:10px;            
-  }
+}
   
 body::-webkit-scrollbar-track {
   background: black;
@@ -38,4 +37,13 @@ body::-webkit-scrollbar-thumb {
   border-radius: 6px;       
   border: 1px solid black;  
 }
+
+@media screen and (max-width: $sm-screen) {
+  body{
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
   

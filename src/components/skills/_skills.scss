@@ -1,7 +1,7 @@
 @import '../../scss/variables.scss';
 
 #skills{
-    padding: 3rem 2rem;
+    padding: 2rem;
     
     .skills-title{
         text-align: center;
@@ -63,11 +63,36 @@
 }
 
 @media screen and (max-width: $lg-screen) {
-    .skill-box{
-        // display: flex;
-        // flex-direction: column;
-        // flex-wrap: wrap;
-        // justify-content: space-between;
-        width: 60%;
-    } 
+    #skills{
+        .skills-container{
+            justify-content: space-evenly;
+            flex-wrap: nowrap;
+            .skill-box{
+                min-width: 20%;
+            }
+            .cv-download{
+                justify-content: center;
+                align-items: center;
+                .cv-download-img{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $md-screen) {
+    #skills{
+        .skills-container{
+            flex-wrap: wrap;
+            .skill-box{
+                min-width: 80%;
+            }
+            .cv-download{
+                .cv-download-img{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }

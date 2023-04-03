@@ -12,15 +12,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 
     .popup-inner{
         position: relative;
         border-radius: 1rem;
-        padding: 32px;
+        padding: 1.2rem;
         width: 100%;
         max-width: 640px;
+        height: 80vh;
         background-color: $snowWhite;
         color: black;
+        overflow-y: scroll;
+
+        .stacks-container{
+            display: flex;
+        }
         
+        // Style scrollbar Popup
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+        &::-webkit-scrollbar-track {
+            display: none;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $lightBlue;
+            border-radius: 0 12px 12px 0;
+        }
     }
 }
