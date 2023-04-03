@@ -97,9 +97,9 @@ class Portfolio extends Component {
         if (skill === "Node.JS") {
             return (<i className="fa-brands fa-node fa-beat-fade"></i>)
         } else if (skill === "MySQL") {
-            return (<i className="fa-solid fa-database fa-beat-fade"></i>)
+            return (<i className="fa-solid fa-database fa-beat-fade"><span>mySQL</span></i>)
         } else if (skill === "API externes") {
-            return (<i className="fa-solid fa-gears fa-beat-fade"></i>)
+            return (<i className="fa-solid fa-gears fa-beat-fade"><span>API</span></i>)
         }
     }
 
