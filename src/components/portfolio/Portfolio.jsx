@@ -30,8 +30,8 @@ class Portfolio extends Component {
                     content: 'This is the content of the popup 2.',
                     imageProject: TBD,
                     content2:"",
-                    skillsFront: ["React.JS", "JavaScript", "HTML", "CSS/SCSS"],
-                    skillsBack: ["Node.JS","MySQL"],
+                    skillsFront: [],
+                    skillsBack: [],
                 },
                 {
                     id: 3,
@@ -40,9 +40,8 @@ class Portfolio extends Component {
                     content: 'This is the content of the popup 3.',
                     imageProject: TBD,
                     content2:"",
-                    skillsFront: ["React.JS", "JavaScript", "HTML", "CSS/SCSS"],
-                    skillsBack: ["Node.JS","MySQL"],
-
+                    skillsFront: [],
+                    skillsBack: [],
                 },
 
             ]
@@ -84,21 +83,23 @@ class Portfolio extends Component {
 
     imageFrontToDisplay (skill) {
         if (skill === "React.JS") {
-            return (<i className="fa-brands fa-react fa-beat"></i>)
+            return (<i className="fa-brands fa-react fa-beat-fade"></i>)
         } else if (skill === "JavaScript") {
-            return (<i className="fa-brands fa-square-js fa-beat"></i>)
+            return (<i className="fa-brands fa-square-js fa-beat-fade"></i>)
         } else if (skill === "HTML") {
-            return (<i className="fa-brands fa-html5 fa-beat"></i>)
+            return (<i className="fa-brands fa-html5 fa-beat-fade"></i>)
         } else if (skill === "CSS/SCSS") {
-            return (<i className="fa-brands fa-css3-alt fa-beat"></i>)
+            return (<i className="fa-brands fa-css3-alt fa-beat-fade"></i>)
         }
     }
 
     imageBackToDisplay (skill) {
         if (skill === "Node.JS") {
-            return (<i className="fa-brands fa-node fa-beat"></i>)
+            return (<i className="fa-brands fa-node fa-beat-fade"></i>)
         } else if (skill === "MySQL") {
-            return (<i className="fa-solid fa-database fa-beat"></i>)
+            return (<i className="fa-solid fa-database fa-beat-fade"></i>)
+        } else if (skill === "API externes") {
+            return (<i className="fa-solid fa-gears fa-beat-fade"></i>)
         }
     }
 

@@ -27,6 +27,10 @@
 
         .stacks-container{
             display: flex;
+            i {
+                color: $darkBlue;
+                font-size: 2rem;
+            }
         }
         
         // Style scrollbar Popup
@@ -42,3 +46,4 @@
         }
     }
 }
+
