@@ -30,7 +30,6 @@
     }
     .presentation {
         text-align: center;
-
         p {
             font-family: $SilkScreen;
             color: $lightBlue;
@@ -62,6 +61,7 @@
                 font-size: 2vw;
                 color: inherit;
                 font-family: inherit;
+                margin: 1.2rem 0 1.5rem 0;
             }
         }
         .btn-about-me{
