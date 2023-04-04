@@ -8,15 +8,33 @@
 
 }
 
+.close-btn{
+    padding: 0 12px;
+    border: 1px solid;
+    border-radius: 6px;
+    font-family: $Poppins;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
 @mixin button($bg, $border, $font) {
     background-color: $bg;
     border-color: $border;
     color: $font;
 }
 
+// Boutons Page générale
 .lightblue-btn{
     @include button(transparent, $lightBlue, $lightBlue)
 }
 .lightblue-btn:hover{
     @include button($lightBlueTransparent, $lightBlue, $lightBlue)
+}
+
+// Boutons Popup Close
+.lightdark-btn{
+    @include button($snowWhite, $darkBlue, $darkBlue)
+}
+.lightdark-btn:hover{
+    @include button($darkBlue, $snowWhite, $snowWhite)
 }

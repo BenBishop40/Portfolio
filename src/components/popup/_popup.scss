@@ -25,17 +25,6 @@
         color: black;
         overflow-y: scroll;
 
-        .stacks-container{
-            display: flex;
-            i {
-                color: $darkBlue;
-                font-size: 2rem;
-                span {
-                    font-size: .6rem;
-                }
-            }
-        }
-        
         // Style scrollbar Popup
         &::-webkit-scrollbar {
             width: 12px;
@@ -46,6 +35,41 @@
         &::-webkit-scrollbar-thumb {
             background-color: $lightBlue;
             border-radius: 0 12px 12px 0;
+        }
+    
+        .thumb-image-content2{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1rem;
+            p{
+                padding: 0 1rem;
+            }
+            .img-project{
+                height: 400px;
+                width: auto;
+                border-radius: 15px;
+            }
+        }
+        .stacks-container{
+            display: flex;
+            justify-content: space-evenly;
+            .stackFront-container, .stackBack-container{
+                .skill-container{
+                    text-align: center;
+                    i {
+                        color: $darkBlue;
+                        font-size: 2rem;
+                        --fa-animation-duration: 3s;
+                        --fa-beat-scale: 1.1;
+                        span {
+                            font-size: .6rem;
+                        }
+                    }
+                    p{
+                        margin: 0.8rem 0 0.4rem ;
+                    }
+                }
+            }
         }
     }
 }

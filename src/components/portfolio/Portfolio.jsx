@@ -4,7 +4,11 @@ import './_portfolio.scss';
 import Popup from '../popup/Popup';
 
 import portfolioProjet1 from '../../img/portfolio-projet1-findyourwave.png';
-import TBD from '../../img/PicID5.jpg';
+import portfolioProjet2 from '../../img/portfolio-projet2-portfolio-web-developper.png';
+import thumbProjet1 from '../../img/thumb-portfolio-projet1-findyourwave.png';
+import thumbProjet2 from '../../img/thumb-portfolio-projet2-portfolio-dev-web.png'
+
+
 
 class Portfolio extends Component {
 
@@ -17,33 +21,26 @@ class Portfolio extends Component {
                     id: 1,
                     trigger: false,
                     title: 'Find Your Wave | application SPA',
+                    thumbInsight: "Projet de formation",
                     content: "Application pour surfers et bodyboarders. Aprés création du profil, permet de consulter les prévisions météos et marées partout dans le monde et les enregistrer. Archivage des sessions de surf et infos associées.",
-                    imageProject: portfolioProjet1,
-                    content2:"Single Page Application développée dans le cadre de mon projet de formation, que je continue à développer avant une future mise en ligne",
+                    imageProjet: portfolioProjet1,
+                    thumbProjet: thumbProjet1,
+                    content2:"Single Page Application développée dans le cadre de mon projet de formation, que je continue à développer en autonomie. Données utilisateurs enregistrées et sécurisées en base de données mySQL, Serveur REST et gestion du CRUD, avec entres autres un panel Admin. ",
                     skillsFront: ["React.JS", "JavaScript", "HTML", "CSS/SCSS"],
-                    skillsBack: ["Node.JS","MySQL", "API externes"],
+                    skillsBack: ["Node.JS", "Express", "MySQL", "API externes"],
                 },
                 {
                     id: 2,
                     trigger: false,
-                    title: 'Popup Content2',
-                    content: 'This is the content of the popup 2.',
-                    imageProject: TBD,
-                    content2:"",
-                    skillsFront: [],
+                    title: 'Portfolio | application SPA',
+                    thumbInsight: "Site web développeur",
+                    content: "Site sur lequel vous êtes actuellement, et toujours en cours d'évolution",
+                    imageProjet: portfolioProjet2,
+                    thumbProjet: thumbProjet2,
+                    content2:"Single Page Application développée sous Framework React.JS, animations avec librairies GSAP ou VanillaJS.",
+                    skillsFront: ["React.JS", "JavaScript", "HTML", "CSS/SCSS"],
                     skillsBack: [],
                 },
-                {
-                    id: 3,
-                    trigger: false,
-                    title: 'Popup Content3',
-                    content: 'This is the content of the popup 3.',
-                    imageProject: TBD,
-                    content2:"",
-                    skillsFront: [],
-                    skillsBack: [],
-                },
-
             ]
         };
 
@@ -100,44 +97,66 @@ class Portfolio extends Component {
             return (<i className="fa-solid fa-database fa-beat-fade"><span>mySQL</span></i>)
         } else if (skill === "API externes") {
             return (<i className="fa-solid fa-gears fa-beat-fade"><span>API</span></i>)
+        } else if (skill === "Express") {
+            return (<i className="fa-solid fa-server fa-beat-fade"></i>)
         }
     }
 
     render() {
         return (
             <>
-                <div id='portfolio'><h2 className='title'>Portfolio<span ref={this.textRef}><span className='display-dots'>.</span><span className='display-dots'>.</span><span className='display-dots'>.</span></span></h2></div>
-                {this.state.popups.map((popup) => (
-                    <div key= {popup.id}>
-                        <button onClick={() => this.handleTogglePopup(popup.id)}>Toggle Btn</button>
-                        <Popup trigger={popup.trigger} closePopup={() => this.handleTogglePopup(popup.id)}>
-                            <h3>{popup.title}</h3>
-                            <p>{popup.content}</p>
-                            <img className='img-project' src={popup.imageProject} alt='project-insight'></img>
-                            <p>{popup.content2}</p>
-                            <div className="stacks-container">
-                                <div className="stackFront-container">
-                                    <h4>Stacks Front:</h4>
-                                    <em>{popup.skillsFront.map((skill) => (
-                                        <div key={this.randomKey()}>
-                                            <p>{`#${skill}`}</p>
-                                            {this.imageFrontToDisplay(skill)}
+                <div id='portfolio'>
+                    <h2 className='title'>Portfolio<span ref={this.textRef}><span className='display-dots'>.</span><span className='display-dots'>.</span><span className='display-dots'>.</span></span></h2>
+                    <div className='thumbs-container'>
+                        {this.state.popups.map((popup) => (
+                            <div className="thumb-container" key={popup.id}>
+                                <div className="thumb">
+                                    <div className="thumb-preview" onClick={() => this.handleTogglePopup(popup.id)}>
+                                        <p>{popup.title}</p>
+                                        <p>{popup.thumbInsight}</p>
+                                    </div>
+                                    <img src={popup.thumbProjet} alt='thumb-project-portfolio' className='img-thumb'></img>
+                                    <Popup trigger={popup.trigger} closePopup={() => this.handleTogglePopup(popup.id)}>
+                                        <h3>{popup.title}</h3>
+                                        <p>{popup.content}</p>
+                                        <div className='thumb-image-content2'>
+                                            <img className='img-project' src={popup.imageProjet} alt='project-insight'></img>
+                                            <p>{popup.content2}</p>
                                         </div>
-                                    ))}</em>
+                                        <div className="stacks-container">
+                                            <div className="stackFront-container">
+                                                <div className="skill-container">
+                                                <h4>Stacks Front :</h4>
+                                                <em>{popup.skillsFront.map((skill) => (
+                                                    <div key={this.randomKey()}>
+                                                        <p>{`#${skill}`}</p>
+                                                        {this.imageFrontToDisplay(skill)}
+                                                    </div>
+                                                ))}</em>
+                                                </div>
+                                            </div>
+                                            <div className="stackBack-container">
+                                                <div className="skill-container">
+                                                    <h4>Stacks Back :</h4>
+                                                    <em>{popup.skillsBack.map((skill) => (
+                                                        <div key={this.randomKey()}>
+                                                            <p>{`#${skill}`}</p>
+                                                            {this.imageBackToDisplay(skill)}
+                                                        </div>
+                                                    ))}</em>
+                                                </div>    
+                                            </div>
+                                        </div>  
+                                    </Popup>
                                 </div>
-                                <div className="stackFront-container">
-                                    <h4>Stacks Back:</h4>
-                                    <em>{popup.skillsBack.map((skill) => (
-                                        <div key={this.randomKey()}>
-                                            <p>{`#${skill}`}</p>
-                                            {this.imageBackToDisplay(skill)}
-                                        </div>
-                                    ))}</em>
+                                <div className="thumb-bottom">
+                                    <p>{popup.title}</p>
+                                    <p>{popup.thumbInsight}</p>
                                 </div>
-                            </div>  
-                        </Popup>
+                            </div>
+                        ))}
                     </div>
-                ))}
+                </div>
             </>
         )
     }
