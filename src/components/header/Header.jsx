@@ -39,7 +39,7 @@ class Header extends Component {
         const { isTransparent, isSmallScreen, showLinks } = this.state;
         
         const handleClick = () => {
-            window.location.reload();
+            window.location.replace('/');
         }
         const handleShowLinks = () => {
             this.setState({ showLinks: !this.state.showLinks });
@@ -56,11 +56,11 @@ class Header extends Component {
                     <img className="navbar_logo" src={logo} alt='logo-dark-theme' onClick={handleClick}/>
                 </div>
                 <ul className="navbar_links">
-                    <li className="navbar_item slideInDown1"><a href='#about-me' className='navbar_link' onClick={closeMenu}>Accueil</a></li>
-                    <li className="navbar_item slideInDown2"><a href='#profil' className='navbar_link' onClick={closeMenu}>Profil</a></li>
-                    <li className="navbar_item slideInDown3"><a href='#skills' className='navbar_link' onClick={closeMenu}>Compétences</a></li>
-                    <li className="navbar_item slideInDown4"><a href='#portfolio' className='navbar_link' onClick={closeMenu}>Portfolio</a></li>
-                    <li className="navbar_item slideInDown5"><a href='#contact' className='navbar_link' onClick={closeMenu}>Contact</a></li>
+                    <li className="navbar_item slideInDown1"><a href='/#about-me' className='navbar_link' onClick={closeMenu}>Accueil</a></li>
+                    <li className="navbar_item slideInDown2"><a href='/#profil' className='navbar_link' onClick={closeMenu}>Profil</a></li>
+                    <li className="navbar_item slideInDown3"><a href='/#skills' className='navbar_link' onClick={closeMenu}>Compétences</a></li>
+                    <li className="navbar_item slideInDown4"><a href='/#portfolio' className='navbar_link' onClick={closeMenu}>Portfolio</a></li>
+                    <li className="navbar_item slideInDown5"><a href='/#contact' className='navbar_link' onClick={closeMenu}>Contact</a></li>
                 </ul>
                 <button className="navbar_burger" onClick={handleShowLinks}>
                     <span className="burger_bar"></span>

@@ -137,7 +137,7 @@ const Skills = () => {
                             </div>
                         </div>
                         <div className="skill-item">
-                            <p>SQL</p>
+                            <p>mySQL</p>
                             <div className="skill-bar">
                                 <div className="skill-bar-fullfilled sql_skill"></div>
                             </div>

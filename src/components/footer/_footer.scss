@@ -14,9 +14,14 @@
             padding: 0 .5rem;
             cursor: pointer;
             transition: all .2s ease-in-out;
+            a:hover{
+                color:$lightBlue;
+            }
             &:hover{
-                color: $lightBlue;
                 transform: translateY(-0.3vh);
+                // A supp une fois lien plan du site OK
+                color:$lightBlue;
+
             }
         }
     }
