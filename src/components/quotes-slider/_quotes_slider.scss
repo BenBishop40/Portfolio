@@ -18,6 +18,11 @@
         .carousel-slider {
             display: flex;
             height: 100%;
+            .control-arrow,
+            .control-dots {
+                    z-index: 0;
+                }
+
             
             button {
                 padding: 0 2rem;
@@ -48,10 +53,10 @@
     #carousel{
         .carousel-root {
             .carousel-slider {
-                .control-arrow,
-                .control-dots {
-                    z-index: 0;
-                }
+                // .control-arrow,
+                // .control-dots {
+                //     z-index: 0;
+                // }
 
                 .quote-item {
                     width: 70%;

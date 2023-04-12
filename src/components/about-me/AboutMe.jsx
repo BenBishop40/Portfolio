@@ -138,7 +138,7 @@ class AboutMe extends Component {
   render() {
     return (
       <div id='about-me'>
-            {/* <img className='img-cartoon' alt='portrait_cartoon_benjamin_leveque' src={pictCartoon}/> */}
+            {/* <img className='img-cartoon' alt='portrait_cartoon' src={pictCartoon}/> */}
         <div className="presentation">
           <p>
             Hello{' '}
