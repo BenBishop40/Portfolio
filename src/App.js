@@ -10,7 +10,7 @@ class App extends Component {
             <>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<Home />} />
+                        <Route exact path="/" element={<Home />} />
                         <Route path="/LegalNotice/" element={<LegalNoticPage />} />
                     </Routes>
                 </BrowserRouter>

@@ -17,7 +17,7 @@ const LegalNotice = () => {
     }, [])
 
     return (
-        <div className="legal-notice">
+        <div id="legal-notice">
            <h1>Informations légales</h1>
             <p>Correspondant aux dispositions  de l'article 6-III et 19 de la Loi n* 2004-575 du 21 juin 2004 relative à la Confiance en l'économie numérique, dite L.C.E.N., nous informons les visiteurs du site internet : <a href="https://www.benjamin-leveque.com" target="_blank" rel="noreferrer">benjamin-leveque.com</a> Ces données ci-jointes :</p>
             <br />
