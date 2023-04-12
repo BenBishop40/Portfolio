@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './_about_me.scss';
-// import pictCartoon from '../../img/PicID5.jpg';
 
 class TxtRotate extends Component {
     constructor(props) {
@@ -138,7 +137,6 @@ class AboutMe extends Component {
   render() {
     return (
       <div id='about-me'>
-            {/* <img className='img-cartoon' alt='portrait_cartoon' src={pictCartoon}/> */}
         <div className="presentation">
           <p>
             Hello{' '}

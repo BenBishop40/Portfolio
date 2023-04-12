@@ -1,0 +1,4 @@
+# Activez HTTPS
+RewriteEngine On
+RewriteCond %{Server_Port} !=443
+RewriteRule ^(.*)$ https://benjamin-leveque.com/$1 [R=301,L]
