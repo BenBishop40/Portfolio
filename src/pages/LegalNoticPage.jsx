@@ -1,7 +1,7 @@
 import { Component } from "react";
-import Header from "../components/header/Header";
+// import Header from "../components/header/Header";
 import LegalNotice from "../components/legal-notice/Legal-Notice";
-import Footer from "../components/footer/Footer";
+// import Footer from "../components/footer/Footer";
 
 class LegalNoticPage extends Component {
     componentDidMount() {
@@ -10,9 +10,9 @@ class LegalNoticPage extends Component {
     render() {
         return (
             <>
-                <Header />
+                {/* <Header /> */}
                 <LegalNotice />
-                <Footer />
+                {/* <Footer /> */}
             </>
         );
     }

@@ -8,9 +8,8 @@ import portfolioProjet2 from '../../img/portfolio-projet2-portfolio-web-developp
 import thumbProjet1 from '../../img/thumb-portfolio-projet1-findyourwave.png';
 import thumbProjet2 from '../../img/thumb-portfolio-projet2-portfolio-dev-web.png'
 
-
-
 class Portfolio extends Component {
+
     constructor(props) {
         super(props);
 
@@ -47,6 +46,7 @@ class Portfolio extends Component {
     
         this.textRef = createRef();
     }
+
     componentDidMount() {
         const timeline = gsap.timeline({ repeat: -1 });
         const chars = Array.from(this.textRef.current.querySelectorAll(".display-dots"));
@@ -81,6 +81,7 @@ class Portfolio extends Component {
             return (<i className="fa-brands fa-css3-alt fa-beat-fade"></i>)
         }
     }
+
     imageBackToDisplay (skill) {
         if (skill === "Node.JS") {
             return (<i className="fa-brands fa-node fa-beat-fade"></i>)
@@ -92,6 +93,7 @@ class Portfolio extends Component {
             return (<i className="fa-solid fa-server fa-beat-fade"></i>)
         }
     }
+
     render() {
         return (
             <>

@@ -12,23 +12,23 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const slideInTop = (elem) => {
     gsap.fromTo(
         elem,
-        {opacity: 0,
-        y: 100,
-    },
-    {
-       opacity: 1,
-       y: 0,
-       delay: 0.2,
-       duration: 1,
-       scrollTrigger: {
-        trigger: elem,
-        start: "top center",
-        end: "bottom center"
-       } 
+        {
+            opacity: 0,
+            y: 100,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            delay: 0.2,
+            duration: 1,
+            scrollTrigger: {
+                trigger: elem,
+                start: "top center",
+                end: "bottom center",
+        }, 
     }
     )
 }
-
 const Profil = () => {
     
     // Slide section profil
