@@ -29,7 +29,7 @@ const Skills = () => {
         gsap.fromTo(
             elem,
             {
-                y: 200,
+                y: 100,
                 opacity: 0,
             },
             {
@@ -89,106 +89,108 @@ const Skills = () => {
     }, []);
 
     return (
-        <section id='skills'>
-            <div className='skills-title'>
-                <h2>Compétences<span ref={textRef}><span className='display-dots'>.</span><span className='display-dots'>.</span><span className='display-dots'>.</span></span></h2>
-            </div>
-            <div className='skills-container'>
-                <div className="skill-box">
-                    <div className="box">
-                        <h3>Front-end</h3>
-                        <div className="skill-item">
-                            <p>HTML</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled html_skill"></div>
-                            </div>
-                        </div>
-                        <div className="skill-item">
-                            <p>CSS / SCSS</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled css_skill"></div>
-                            </div>
-                        </div>
-                        <div className="skill-item">
-                            <p>Bootstrap</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled bootstrap_skill"></div>
-                            </div>
-                        </div>
-                        <div className="skill-item">
-                            <p>Javascript</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled javascript_skill"></div>
-                            </div>
-                        </div>
-                        <div className="skill-item">
-                            <p>React</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled react_skill"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="box">
-                        <h3>Back-end</h3>
-                        <div className="skill-item">
-                            <p>Node JS</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled node_skill"></div>
-                            </div>
-                        </div>
-                        <div className="skill-item">
-                            <p>mySQL</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled sql_skill"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="box">
-                        <h3>Design</h3>
-                        <div className="skill-item">
-                            <p>Adobe XD</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled adobe_XD_skill"></div>
-                            </div>
-                        </div>
-                        <div className="skill-item">
-                            <p>Adobe Photohop</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled adobe_PS_skill"></div>
-                            </div>
-                        </div>
-                        <div className="skill-item">
-                            <p>Adobe Illustrator</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled adobe_IL_skill"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="box">
-                        <h3>Industrie & Projets</h3>
-                        <div className="skill-item">
-                            <p>Sage / SAP</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled erp_skill"></div>
-                            </div>
-                        </div>
-                        <div className="skill-item">
-                            <p>Catia V5</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled catia_skill"></div>
-                            </div>
-                        </div>
-                        <div className="skill-item">
-                            <p>Suite Office</p>
-                            <div className="skill-bar">
-                                <div className="skill-bar-fullfilled office_skill"></div>
-                            </div>
-                        </div>
-                    </div>
+        <section>
+            <div id='skills'>
+                <div className='skills-title'>
+                    <h2>Compétences<span ref={textRef}><span className='display-dots'>.</span><span className='display-dots'>.</span><span className='display-dots'>.</span></span></h2>
                 </div>
-                <div className='cv-download'>
-                    <img src='./capture-cv-benjamin-leveque.JPG' alt="CV Benjamin Leveque" className='cv-download-img'></img>
-                    <button className='btn lightblue-btn'><a href="./cv-benjamin-leveque.pdf" alt="CV en ligne de Benjamin Leveque" target="_blank" download>Télécharger CV</a></button>
+                <div className='skills-container'>
+                    <div className="skill-box">
+                        <div className="box">
+                            <h3>Front-end</h3>
+                            <div className="skill-item">
+                                <p>HTML</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled html_skill"></div>
+                                </div>
+                            </div>
+                            <div className="skill-item">
+                                <p>CSS / SCSS</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled css_skill"></div>
+                                </div>
+                            </div>
+                            <div className="skill-item">
+                                <p>Bootstrap</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled bootstrap_skill"></div>
+                                </div>
+                            </div>
+                            <div className="skill-item">
+                                <p>Javascript</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled javascript_skill"></div>
+                                </div>
+                            </div>
+                            <div className="skill-item">
+                                <p>React</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled react_skill"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="box">
+                            <h3>Back-end</h3>
+                            <div className="skill-item">
+                                <p>Node JS</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled node_skill"></div>
+                                </div>
+                            </div>
+                            <div className="skill-item">
+                                <p>mySQL</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled sql_skill"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="box">
+                            <h3>Design</h3>
+                            <div className="skill-item">
+                                <p>Adobe XD</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled adobe_XD_skill"></div>
+                                </div>
+                            </div>
+                            <div className="skill-item">
+                                <p>Adobe Photohop</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled adobe_PS_skill"></div>
+                                </div>
+                            </div>
+                            <div className="skill-item">
+                                <p>Adobe Illustrator</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled adobe_IL_skill"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="box">
+                            <h3>Industrie & Projets</h3>
+                            <div className="skill-item">
+                                <p>Sage / SAP</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled erp_skill"></div>
+                                </div>
+                            </div>
+                            <div className="skill-item">
+                                <p>Catia V5</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled catia_skill"></div>
+                                </div>
+                            </div>
+                            <div className="skill-item">
+                                <p>Suite Office</p>
+                                <div className="skill-bar">
+                                    <div className="skill-bar-fullfilled office_skill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='cv-download'>
+                        <img src='./capture-cv-benjamin-leveque.JPG' alt="CV Benjamin Leveque" className='cv-download-img'></img>
+                        <button className='btn lightblue-btn'><a href="./cv-benjamin-leveque.pdf" alt="CV en ligne de Benjamin Leveque" target="_blank" download>Télécharger CV</a></button>
+                    </div>
                 </div>
             </div>
         </section>

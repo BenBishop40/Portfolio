@@ -13,7 +13,7 @@ const slideInTop = (elem) => {
     gsap.fromTo(
         elem,
         {opacity: 0,
-        y: 200,
+        y: 100,
     },
     {
        opacity: 1,
@@ -31,11 +31,13 @@ const slideInTop = (elem) => {
 
 const Profil = () => {
     
+    // Slide section profil
     useEffect(() => {
         slideInTop('#profil');
     }, [])
 
 
+    // animation ... infinie
     const textRef = useRef(null);
     useEffect(() => {
         const timeline = gsap.timeline({repeat: -1});
@@ -51,6 +53,8 @@ const Profil = () => {
             timeline.kill();
         };
     }, []);
+
+    
         
     return (
         <section id='profil'>

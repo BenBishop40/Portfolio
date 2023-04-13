@@ -8,13 +8,13 @@ class Footer extends Component {
     render() {
 
         return (
-            <div className='footer'>
+            <section className='footer'>
                 <p id='copyright'>&#169; Copyright 2023 | Benjamin LEVEQUE | Tous droits réservés</p>
                 <ul id='footer-links'>
                     <li className='footer-link'><Link to={"/LegalNotice"}>Mentions légales</Link></li>
                     <li className='footer-link'>Plan du site</li>
                 </ul>
-            </div>
+            </section>
         )
     }
 }

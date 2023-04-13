@@ -11,7 +11,6 @@ import thumbProjet2 from '../../img/thumb-portfolio-projet2-portfolio-dev-web.pn
 
 
 class Portfolio extends Component {
-
     constructor(props) {
         super(props);
 
@@ -48,36 +47,29 @@ class Portfolio extends Component {
     
         this.textRef = createRef();
     }
-
     componentDidMount() {
         const timeline = gsap.timeline({ repeat: -1 });
-
         const chars = Array.from(this.textRef.current.querySelectorAll(".display-dots"));
-
+        
         timeline.from(chars, {opacity: 0, stagger: 0.5})
         .to(chars, {opacity: 1, stagger: 0.5, delay: 0})
         .from(chars.reverse(), {opacity: 1, stagger: 0.5})
         .to(chars.reverse(), {opacity: 0, stagger: 0.5, delay: 0});
-    
         this.timeline = timeline;
     }
-
     componentWillUnmount() {
         this.timeline.kill();
     }
-
     handleTogglePopup(id) {
         const popups = [...this.state.popups];
         const index = popups.findIndex(p => p.id === id);
         popups[index].trigger = !popups[index].trigger;
         this.setState({ popups });
     }
-
     randomKey() {
         const keyRandomNumber = Math.random()/1000;
         return keyRandomNumber;
     }
-
     imageFrontToDisplay (skill) {
         if (skill === "React.JS") {
             return (<i className="fa-brands fa-react fa-beat-fade"></i>)
@@ -89,7 +81,6 @@ class Portfolio extends Component {
             return (<i className="fa-brands fa-css3-alt fa-beat-fade"></i>)
         }
     }
-
     imageBackToDisplay (skill) {
         if (skill === "Node.JS") {
             return (<i className="fa-brands fa-node fa-beat-fade"></i>)
@@ -101,11 +92,10 @@ class Portfolio extends Component {
             return (<i className="fa-solid fa-server fa-beat-fade"></i>)
         }
     }
-
     render() {
         return (
             <>
-                <div id='portfolio'>
+                <section id='portfolio'>
                     <h2 className='title'>Portfolio<span ref={this.textRef}><span className='display-dots'>.</span><span className='display-dots'>.</span><span className='display-dots'>.</span></span></h2>
                     <div className='thumbs-container'>
                         {this.state.popups.map((popup) => (
@@ -156,7 +146,7 @@ class Portfolio extends Component {
                             </div>
                         ))}
                     </div>
-                </div>
+                </section>
             </>
         )
     }

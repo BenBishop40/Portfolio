@@ -136,22 +136,24 @@ class TxtToDisplay extends Component {
 class AboutMe extends Component {
   render() {
     return (
-      <div id='about-me'>
-        <div className="presentation">
-          <p>
-            Hello{' '}
-            <TxtRotate
-              toRotate='["World !", "Visiteur !", "Recruteur ?!"]'
-              period="3000"
-            />
-            <span className='wrap-border'>
-              |
-            </span>
-          </p>
-          <TxtToDisplay />
-          <button className='btn btn-about-me lightblue-btn'><a href='#profil'>Plus d'info</a></button>
+      <section>
+        <div id="about-me">
+          <div className="presentation">
+            <p>
+              Hello{' '}
+              <TxtRotate
+                toRotate='["World !", "Visiteur !", "Recruteur ?!"]'
+                period="3000"
+              />
+              <span className='wrap-border'>
+                |
+              </span>
+            </p>
+            <TxtToDisplay />
+            <button className='btn btn-about-me lightblue-btn'><a href='#profil'>Plus d'info</a></button>
+          </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
