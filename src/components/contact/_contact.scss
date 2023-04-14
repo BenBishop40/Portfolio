@@ -3,15 +3,57 @@
 
 #contact{
     margin: 10rem 0rem;
-    .title{
+    .title, p{
         text-align: center;
     }
     .form-box{
-        max-width: 250px;
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem;
         margin: 0 auto;
+        background-color: $darkBlue;
+        border-radius: 15px;
         .form-content{
             display: flex;
             flex-direction: column;
+            margin: 0 auto;
+            width: 80%;
+            .form-content-detail{
+                position: relative;
+                margin: 1rem 0;
+                label{
+                    padding: 0 .2rem;
+                    margin: 0;
+                    position: absolute;
+                    top: 5px;
+                    left: 12px;
+                    background-color: $darkBlue;
+                    color: $lightBlue;
+                }
+                input, textarea{
+                    background-color: $darkBlue;
+                    border: 1px solid $lightBlue;
+                    border-radius: 10px;
+                    color: $snowWhite;
+                }
+                input{
+                    -webkit-appearance: none;
+                    appearance: none;
+                    height: 75px;
+                    width: 200px;
+                }
+                textarea{
+                    height: 150px;
+                    width: 350px;
+                    padding-top: 40px;
+                }
+            }
+            
+        }
+        .submit-form-btn{
+            width: 150px;
             margin: 0 auto;
         }
     }
