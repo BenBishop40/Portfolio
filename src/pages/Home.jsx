@@ -6,6 +6,7 @@ import Status from "../components/status/Status";
 import Skills from "../components/skills/Skills";
 import QuotesSlider from "../components/quotes-slider/QuotesSlider";
 import Portfolio from "../components/portfolio/Portfolio";
+import ContactUs from "../components/contact/Contact";
 // import Footer from "../components/footer/Footer";
 
 class Home extends Component {
@@ -20,6 +21,7 @@ class Home extends Component {
                 <Skills />
                 <QuotesSlider />
                 <Portfolio />
+                <ContactUs />
                 {/* <Footer /> */}
             </>
         );

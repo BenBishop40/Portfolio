@@ -1,1 +1,18 @@
 @import '../../scss/variables.scss';
+
+
+#contact{
+    margin: 10rem 0rem;
+    .title{
+        text-align: center;
+    }
+    .form-box{
+        max-width: 250px;
+        margin: 0 auto;
+        .form-content{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+    }
+}
