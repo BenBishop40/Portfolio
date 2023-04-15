@@ -1,6 +1,6 @@
 import './_header.scss'
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../../img/logo-dark-theme.png'
 
 class Header extends Component {
@@ -34,23 +34,26 @@ class Header extends Component {
         const isTransparent = window.scrollY < 250;
         this.setState({ isTransparent });
     }
+    // Fonction scroll To #section au click (tempo 500ms pr rendu page avant scroll)
     handleLinkClick = (event) => {
         const { hash } = event.currentTarget;
-        const element = document.querySelector(hash);
-        console.log({ hash });
-        console.log(element);
+        setTimeout(() => {
+            const element = document.querySelector(hash);
+            console.log({ hash });
+            console.log(element);
 
-        // Scroll vers section ID
-        if (element) {
-            event.preventDefault();
-            window.scrollTo({
-                top: element.offsetTop,
-                behavior: "smooth",
-            });
-        };
-        // fermer menu burger post click
-        this.setState({ showLinks: false })
-    }
+            // Scroll vers section ID
+            if (element) {
+                event.preventDefault();
+                window.scrollTo({
+                    top: element.offsetTop,
+                    behavior: "smooth",
+                });
+            };
+            // fermer menu burger post click
+            this.setState({ showLinks: false })
+            }, 500);
+    };
 
     
     render() {
@@ -73,11 +76,11 @@ class Header extends Component {
                         <img className="navbar_logo" src={logo} alt='logo-dark-theme' onClick={handleClick}/>
                     </div>
                     <ul className="navbar_links">
-                        <li className="navbar_item slideInDown1"><Link to='/#about-me' className='navbar_link' onClick={this.handleLinkClick}>Accueil</Link></li>
-                        <li className="navbar_item slideInDown2"><Link to='/#profil' className='navbar_link' onClick={this.handleLinkClick}>Profil</Link></li>
-                        <li className="navbar_item slideInDown3"><Link to='/#skills' className='navbar_link' onClick={this.handleLinkClick}>Compétences</Link></li>
-                        <li className="navbar_item slideInDown4"><Link to='/#portfolio' className='navbar_link' onClick={this.handleLinkClick}>Portfolio</Link></li>
-                        <li className="navbar_item slideInDown5"><Link to='/#contact' className='navbar_link' onClick={this.handleLinkClick}>Contact</Link></li>
+                        <li className="navbar_item slideInDown1"><NavLink to='/#about-me' className='navbar_link' onClick={this.handleLinkClick}>Accueil</NavLink></li>
+                        <li className="navbar_item slideInDown2"><NavLink to='/#profil' className='navbar_link' onClick={this.handleLinkClick}>Profil</NavLink></li>
+                        <li className="navbar_item slideInDown3"><NavLink to='/#skills' className='navbar_link' onClick={this.handleLinkClick}>Compétences</NavLink></li>
+                        <li className="navbar_item slideInDown4"><NavLink to='/#portfolio' className='navbar_link' onClick={this.handleLinkClick}>Portfolio</NavLink></li>
+                        <li className="navbar_item slideInDown5"><NavLink to='/#contact' className='navbar_link' onClick={this.handleLinkClick}>Contact</NavLink></li>
                     </ul>
                     <button className="navbar_burger" onClick={handleShowLinks}>
                         <span className="burger_bar"></span>

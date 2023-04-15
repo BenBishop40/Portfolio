@@ -42,24 +42,24 @@ const Contact = () => {
                 <form ref={form} onSubmit={sendEmail} className="form-box">
                     <div className="form-content">
                         <div className="form-content-detail">
+                            <input type="text" name="user_name" placeholder=" " required></input>
                             <label>nom *</label>
-                            <input type="text" name="user_name" required></input>
                         </div>
                         <div className="form-content-detail">
+                            <input type="text" name="user_society" placeholder=" "></input>
                             <label>société</label>
-                            <input type="text" name="user_society"></input>
                         </div>
-                        <div className="form-content-detail">
+                        <div className="form-content-detail"> 
+                            <input type="tel" name="user_phone" placeholder=" "></input>
                             <label>téléphone</label>
-                            <input type="tel" name="user_phone"></input>
                         </div>
                         <div className="form-content-detail">
+                            <input type="email" name="user_email" id="mail-box" placeholder=" " required></input>
                             <label>email *</label>
-                            <input type="email" name="user_email" required></input>
                         </div>
                         <div className="form-content-detail">
+                            <textarea name="user_message" placeholder=" " required></textarea>
                             <label>message *</label>
-                            <textarea name="user_message" required></textarea>
                         </div>
                     </div>
                         <button className="btn lightblue-btn submit-form-btn" type="submit">Soumettre</button>
