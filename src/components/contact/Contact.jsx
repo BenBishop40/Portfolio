@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import './_contact.scss';
 import emailjs from '@emailjs/browser';
@@ -13,6 +13,11 @@ const Contact = () => {
         emailjs.sendForm('service_fyxd0aq', 'template_k377uap', form.current, '-mdfyJh5FHwMPjywl')
             .then((result) => {
                 console.log(result.text);
+                // reinitialisation champs formulaire
+                form.current.reset();
+                // fenetre de confirmation dédié au user 
+                setConfirmation(`Votre message a bien été envoyé. Merci ${user_name} !`);
+                alert(`Votre message a bien été envoyé. Merci ${user_name} !`)
             }, (error) => {
                 console.log(error.text);
             });
@@ -35,6 +40,11 @@ const Contact = () => {
         };
     }, []);
 
+    // Var d'état stockage input formulaire
+    const [user_name, setUser_Name] = useState("");
+    // Var d'état pour afficher la fenetre de confirmation
+    const [confirmation, setConfirmation] = useState("");
+
     return (
         <>
             <section id="contact">
@@ -43,7 +53,7 @@ const Contact = () => {
                 <form ref={form} onSubmit={sendEmail} className="form-box">
                     <div className="form-content">
                         <div className="form-content-detail">
-                            <input type="text" name="user_name" placeholder=" " required></input>
+                            <input type="text" name="user_name" placeholder=" " required onChange={(e) => setUser_Name(e.target.value)}></input>
                             <label>nom *</label>
                         </div>
                         <div className="form-content-detail">
