@@ -39,6 +39,7 @@ const Contact = () => {
         <>
             <section id="contact">
                 <h2 className='title'>Contactez-moi<span ref={textRef}><span className='display-dots'>.</span><span className='display-dots'>.</span><span className='display-dots'>.</span></span></h2>
+                <p className="contact-description">Vous pouvez me contacter via le formulaire ou bien les liens proposés, je vous répondrai dans les meilleurs délais.</p>
                 <form ref={form} onSubmit={sendEmail} className="form-box">
                     <div className="form-content">
                         <div className="form-content-detail">
@@ -61,8 +62,31 @@ const Contact = () => {
                             <textarea name="user_message" placeholder=" " required></textarea>
                             <label>message *</label>
                         </div>
-                    </div>
                         <button className="btn lightblue-btn submit-form-btn" type="submit">Soumettre</button>
+                    </div>
+                    <div className="form-content-right">
+                        <div className="contact-box">
+                            <div className="contact-detail-item">
+                                <i className="fa-regular fa-envelope"></i>
+                                <a href="mailto:contact@benjamin-leveque.com">contact@benjamin-leveque.com</a>
+                            </div>
+                            <div className="contact-detail-item">
+                                <i className="fa-solid fa-phone-flip"></i>
+                                <a href="tel:+33632761787">06 32 76 17 87</a>
+                            </div>
+                            <div className="contact-detail-item">
+                                <i className="fa-solid fa-house-chimney"></i>
+                                <a href="https://goo.gl/maps/pnqTwYKZYu11E4DXA" target="_blank" rel="noreferrer">33300 Bordeaux</a>
+                            </div>
+                            <div className="contact-detail-item">
+                                <div className="icon-outline">
+                                    <a href="https://www.linkedin.com/in/benjamin-leveque-6a6b001b5/" target="_blank" rel="noreferrer">
+                                        <i className="fa-brands fa-linkedin" id="linkedin-icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </section>
         </>
