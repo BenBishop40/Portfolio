@@ -1,9 +1,16 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, Fragment } from "react";
 import { gsap } from "gsap";
 import './_contact.scss';
 import emailjs from '@emailjs/browser';
+import Alert from "../alert/Alert";
 
 const Contact = () => {
+
+    // Var d'état stockage input formulaire
+    const [user_name, setUser_Name] = useState("");
+    // Var d'état pour afficher la fenetre de confirmation
+    const [confirmation, setConfirmation] = useState(false);
+
     // Ref formulaire
     const form = useRef();
     // Fonction envoimail viaEmail.js
@@ -16,12 +23,16 @@ const Contact = () => {
                 // reinitialisation champs formulaire
                 form.current.reset();
                 // fenetre de confirmation dédié au user 
-                setConfirmation(`Votre message a bien été envoyé. Merci ${user_name} !`);
-                alert(`Votre message a bien été envoyé. Merci ${user_name} !`)
-            }, (error) => {
+                setConfirmation(true);
+                // alert(`Votre message a bien été envoyé. Merci ${user_name} !`)
+            }
+            ,(error) => {
                 console.log(error.text);
-            });
+            }
+        );
     };
+
+    
 
     // animation ... infinie
     const textRef = useRef(null);
@@ -40,16 +51,13 @@ const Contact = () => {
         };
     }, []);
 
-    // Var d'état stockage input formulaire
-    const [user_name, setUser_Name] = useState("");
-    // Var d'état pour afficher la fenetre de confirmation
-    const [confirmation, setConfirmation] = useState("");
+
 
     return (
         <>
             <section id="contact">
                 <h2 className='title'>Contactez-moi<span ref={textRef}><span className='display-dots'>.</span><span className='display-dots'>.</span><span className='display-dots'>.</span></span></h2>
-                <p className="contact-description">Vous pouvez me contacter via le formulaire ou bien les liens proposés, je vous répondrai dans les meilleurs délais.</p>
+                <p className="contact-description">Vous pouvez me contacter via le formulaire ou les liens proposés, je vous répondrai dans les meilleurs délais.</p>
                 <form ref={form} onSubmit={sendEmail} className="form-box">
                     <div className="form-content">
                         <div className="form-content-detail">
@@ -98,6 +106,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </form>
+                {confirmation && <Alert user_name={user_name} closeAlert={() => {setConfirmation(false)}}/>}
             </section>
         </>
     )
