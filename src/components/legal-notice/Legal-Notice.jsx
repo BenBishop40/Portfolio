@@ -28,7 +28,7 @@ const LegalNotice = () => {
             <br />
             Le Fondateur du site internet est : <strong>Benjamin Leveque</strong><br />
             Chef de la publication est : <strong>Benjamin Leveque</strong><br />
-            Par quel moyen entrer en contact avec le Décideur de publication : <strong>contact@benjamin-leveque.com</strong><br />
+            Par quel moyen entrer en contact avec le Décideur de publication : <strong><a href="mailto:contact@benjamin-leveque.com?subject=Contact a partir des mentions légales via le site benjamin-leveque.com">contact@benjamin-leveque.com</a></strong><br />
             <br />
             Le Webmaster est : <strong>Benjamin Leveque</strong><br />
                 Ou entrer en contact avec le Webmaster : <strong><a href="mailto:contact@benjamin-leveque.com?subject=Contact a partir des mentions légales via le site benjamin-leveque.com">contact@benjamin-leveque.com</a></strong><br />

@@ -6,7 +6,7 @@ import Alert from "../alert/Alert";
 
 const Contact = () => {
 
-    // Var d'état stockage input formulaire
+    // Var d'état stockage input formulaire nom user
     const [user_name, setUser_Name] = useState("");
     // Var d'état pour afficher la fenetre de confirmation
     const [confirmation, setConfirmation] = useState(false);
@@ -22,9 +22,8 @@ const Contact = () => {
                 console.log(result.text);
                 // reinitialisation champs formulaire
                 form.current.reset();
-                // fenetre de confirmation dédié au user 
+                // state pr fenetre de confirmation dédié au user 
                 setConfirmation(true);
-                // alert(`Votre message a bien été envoyé. Merci ${user_name} !`)
             }
             ,(error) => {
                 console.log(error.text);
