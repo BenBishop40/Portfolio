@@ -97,6 +97,9 @@
             .contact-box{
                 .contact-detail-item{
                     padding: 1.5rem 0;
+                    .contact-icon-container{
+                        display:flex;                        
+                    }
                     i{
                         padding: 0 .4rem;
                     }
@@ -107,20 +110,25 @@
                         }
                     }
                     .icon-outline{
-                        width: 80px;
-                        height: 80px;
+                        width: 70px;
+                        height: 70px;
                         border-radius: 8px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        background-color: $lightBlue;
+                        background-color: $darkBlue;
                         margin: 0 auto;
+                        transition: all .3s ease-in;
                         cursor: pointer;
-                        #linkedin-icon{
+                        .__social-icon{
                             font-size: 3.5rem;
                             color: $snowWhite;
                         }
+                        &:hover{
+                            background-color: $lightBlue;
+                        }
                     }
+                    
                 }
             }
         }

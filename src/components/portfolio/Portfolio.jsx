@@ -17,13 +17,13 @@ class Portfolio extends Component {
             popups: [
                 {
                     id: 1,
-                    trigger: false,
+                    trigger: false,                 
                     title: 'Find Your Wave | application SPA',
                     thumbInsight: "Projet de formation",
                     content: "Application pour surfers et bodyboarders. Aprés création du profil, permet de consulter les prévisions météos et marées partout dans le monde et les enregistrer. Archivage des sessions de surf et infos associées.",
                     imageProjet: portfolioProjet1,
                     thumbProjet: thumbProjet1,
-                    content2:"Single Page Application développée dans le cadre de mon projet de formation, que je continue à développer en autonomie. Données utilisateurs enregistrées et sécurisées en base de données mySQL, Serveur REST et gestion du CRUD, avec entres autres un panel Admin. ",
+                    content2:"Single Page Application développée dans le cadre de mon projet de formation, que je continue à développer en autonomie. Données utilisateurs enregistrées et sécurisées en base de données mySQL, Serveur API Express/NodeJS avec architecture REST et gestion du CRUD, avec entre autres un panel Admin. ",
                     skillsFront: ["React.JS", "JavaScript", "HTML", "CSS/SCSS"],
                     skillsBack: ["Node.JS", "Express", "MySQL", "API externes"],
                 },

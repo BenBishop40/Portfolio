@@ -96,10 +96,17 @@ const Contact = () => {
                                 <a href="https://goo.gl/maps/pnqTwYKZYu11E4DXA" target="_blank" rel="noreferrer">33300 Bordeaux</a>
                             </div>
                             <div className="contact-detail-item">
-                                <div className="icon-outline">
-                                    <a href="https://www.linkedin.com/in/benjamin-leveque-6a6b001b5/" target="_blank" rel="noreferrer">
-                                        <i className="fa-brands fa-linkedin" id="linkedin-icon"></i>
-                                    </a>
+                                <div className="contact-icon-container">
+                                    <div className="icon-outline">
+                                        <a href="https://www.linkedin.com/in/benjamin-leveque-6a6b001b5/" target="_blank" rel="noreferrer">
+                                            <i className="fa-brands fa-linkedin __social-icon"></i>
+                                        </a>
+                                    </div>
+                                    <div className="icon-outline">
+                                        <a href="https://github.com/BenBishop40" target="_blank" rel="noreferrer">
+                                            <i className="fa-brands fa-github __social-icon"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
