@@ -188,7 +188,7 @@ const Skills = () => {
                 </div>
                 <div className='cv-download'>
                     <img src='./capture-cv-benjamin-leveque.JPG' alt="CV Benjamin Leveque" className='cv-download-img'></img>
-                    <button className='btn lightblue-btn'><a href="./cv-benjamin-leveque.pdf" alt="CV en ligne de Benjamin Leveque" target="_blank" download>Télécharger CV</a></button>
+                    <button className='btn lightblue-btn'><a href="./CV B.LEVEQUE 2023-blue.pdf" alt="CV en ligne de Benjamin Leveque" target="_blank" download>Télécharger CV</a></button>
                 </div>
             </div>
         </section>
