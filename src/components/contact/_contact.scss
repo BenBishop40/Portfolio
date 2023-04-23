@@ -126,6 +126,9 @@
                         }
                         &:hover{
                             background-color: $lightBlue;
+                            .__social-icon{
+                                color: $darkBlue
+                            }
                         }
                     }
                     
