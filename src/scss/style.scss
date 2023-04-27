@@ -11,6 +11,9 @@
     background-color: black;
     color: $snowWhite;
     font-family: $Poppins;
+    ::selection{
+      background-color: $lightBlueTransparent;
+    }
     a {
       text-decoration: none;
       color: $snowWhite;
