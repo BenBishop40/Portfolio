@@ -59,11 +59,12 @@ class Header extends Component {
     render() {
         
         const { isTransparent, isSmallScreen, showLinks } = this.state;
+        const { handleClick } = this.props;
         
         // fonction icone retour Home
-        const handleClick = () => {
-            window.location.replace('/');
-        }
+        // const handleClick = () => {
+        //     window.location.replace('/');
+        // }
         // Menu Burger ouverture et fermeture
         const handleShowLinks = () => {
             this.setState({ showLinks: !this.state.showLinks });

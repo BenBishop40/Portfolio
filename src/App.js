@@ -5,16 +5,22 @@ import Home from "./pages/Home";
 import LegalNoticPage from "./pages/LegalNoticPage";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import NotFound from "./components/not-found/NotFound";
 
 class App extends Component {
+    // fonction icone retour Home
+    handleClick = () => {
+        window.location.replace("/");
+    };
     render() {
         return (
             <>
                 <BrowserRouter>
-                    <Header />
+                    <Header handleClick={this.handleClick} />
                     <Routes>
                         <Route path="/LegalNotice/" element={<LegalNoticPage />} />
                         <Route exact path="/" element={<Home />} />
+                        <Route path="*" element={<NotFound handleClick={this.handleClick} />} />
                     </Routes>
                     <Footer />
                 </BrowserRouter>
