@@ -8,7 +8,7 @@ import Footer from "./components/footer/Footer";
 import NotFound from "./components/not-found/NotFound";
 
 class App extends Component {
-    // fonction icone retour Home
+    // fonction retour Home (icone et lien notFound via props)
     handleClick = () => {
         window.location.replace("/");
     };
