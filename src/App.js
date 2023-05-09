@@ -6,6 +6,7 @@ import LegalNoticPage from "./pages/LegalNoticPage";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import NotFound from "./components/not-found/NotFound";
+import NotFoundRedirect from "./components/not-found-redirect/NotFoundRedirect";
 
 class App extends Component {
     // fonction retour Home (icone et lien notFound via props)
@@ -18,9 +19,10 @@ class App extends Component {
                 <BrowserRouter>
                     <Header handleClick={this.handleClick} />
                     <Routes>
-                        <Route path="/LegalNotice/" element={<LegalNoticPage />} />
                         <Route exact path="/" element={<Home />} />
-                        <Route path="*" element={<NotFound handleClick={this.handleClick} />} />
+                        <Route path="/LegalNotice" element={<LegalNoticPage />} />
+                        <Route path="/404NotFound" element={<NotFound handleClick={this.handleClick} />} />
+                        <Route path="/*" element={<NotFoundRedirect />} />
                     </Routes>
                     <Footer />
                 </BrowserRouter>
