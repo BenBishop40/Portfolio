@@ -1,12 +1,17 @@
-import { Component, createRef } from 'react';
+import { Component, Fragment, createRef } from 'react';
 import { gsap } from 'gsap';
 import './_portfolio.scss';
 import Popup from '../popup/Popup';
+
 
 import portfolioProjet1 from '../../img/portfolio-projet1-findyourwave.png';
 import portfolioProjet2 from '../../img/portfolio-projet2-portfolio-web-developper.png';
 import thumbProjet1 from '../../img/thumb-portfolio-projet1-findyourwave.png';
 import thumbProjet2 from '../../img/thumb-portfolio-projet2-portfolio-dev-web.png'
+import portfolioProjet3 from '../../img/portfolio-projet3-Markdown-previewer.png';
+import portfolioProjet4 from '../../img/portfolio-projet4-Drum-machine.png';
+import portfolioProjet5 from '../../img/portfolio-projet5-Calculator-machine.png';
+
 
 class Portfolio extends Component {
 
@@ -36,6 +41,45 @@ class Portfolio extends Component {
                     imageProjet: portfolioProjet2,
                     thumbProjet: thumbProjet2,
                     content2:"Single Page Application développée sous Framework React.JS, animations avec librairies GSAP ou VanillaJS.",
+                    skillsFront: ["React.JS", "JavaScript", "HTML", "CSS/SCSS"],
+                    skillsBack: [],
+                },
+                {
+                    id: 3,
+                    trigger: false,
+                    title: 'Front-End | Markdown Previewer',
+                    thumbInsight: "Site pour traduction Markdown",
+                    content: 'Application développée pour certification FreeCodeCamp, accessible en ligne via le bouton ci-dessous :',
+                    url: "https://benbishop40.github.io/markdown-previewer/",
+                    imageProjet: portfolioProjet3,
+                    thumbProjet: portfolioProjet3,
+                    content2:"Single Page Application développée avec React.JS, traduction Markdown avec librairie Marked.",
+                    skillsFront: ["React.JS", "JavaScript", "HTML", "CSS/SCSS"],
+                    skillsBack: [],
+                },
+                {
+                    id: 4,
+                    trigger: false,
+                    title: 'Front-End | Drum Machine',
+                    thumbInsight: "Application machine à samples",
+                    content: "Application développée pour certification FreeCodeCamp, permettant de jouer avec une boîte à sample et 2 librairies de sons pré-enregistrés. Elle est accessible en ligne via le bouton ci-dessous :",
+                    url: "https://benbishop40.github.io/drum-machine/",
+                    imageProjet: portfolioProjet4,
+                    thumbProjet: portfolioProjet4,
+                    content2:"Single Page Application développée sous Framework React.JS.",
+                    skillsFront: ["React.JS", "JavaScript", "HTML", "CSS/SCSS"],
+                    skillsBack: [],
+                },
+                {
+                    id: 5,
+                    trigger: false,
+                    title: 'Front-End | Calculator',
+                    thumbInsight: "Application calculatrice",
+                    content: "Application développée pour certification FreeCodeCamp, permettant de réaliser des calculs simples. Elle est accessible en ligne via le bouton ci-dessous :",
+                    url: "https://benbishop40.github.io/javascript-calculator/",
+                    imageProjet: portfolioProjet5,
+                    thumbProjet: portfolioProjet5,
+                    content2:"Single Page Application développée sous Framework React.JS, librairie MathJS.",
                     skillsFront: ["React.JS", "JavaScript", "HTML", "CSS/SCSS"],
                     skillsBack: [],
                 },
@@ -111,6 +155,7 @@ class Portfolio extends Component {
                                     <Popup trigger={popup.trigger} closePopup={() => this.handleTogglePopup(popup.id)}>
                                         <h3>{popup.title}</h3>
                                         <p>{popup.content}</p>
+                                        {popup.url ? <a className='close-btn lightdark-btn' href={popup.url} target='_blank' rel='noreferrer'> Cliquez ici</a> : <Fragment></Fragment>}
                                         <div className='thumb-image-content2'>
                                             <img className='img-project' src={popup.imageProjet} alt='project-insight'></img>
                                             <p>{popup.content2}</p>
